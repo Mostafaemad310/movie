@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <!-- start nav -->
+    <section class="navg ">
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+            <div class="container-fluid">
+                <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon "></span>
+                </button>
+                <div class="collapse navbar-collapse " id="navbarNav">
+                    <ul class="nav  ">
+                        <li class="nav-item p-1">
+                            <a onclick="getapi(this.value)" id="nowplaying" class="nav-link active " aria-current="page"
+                                href="#">Now playing</a>
+                        </li>
+                        <li class="nav-item p-1">
+                            <a onclick="getapi(this.value)" id="Popular" class="nav-link active " aria-current="page"
+                                href="#">Popular</a>
+                        </li>
+                        <li class="nav-item p-1">
+                            <a onclick="getapi(this.value)" id="toprated" class="nav-link active " aria-current="page"
+                                href="#">Top Rated</a>
+                        </li>
+                        <li class="nav-item p-1">
+                            <a onclick="gettrending(this.value)" id="trending" class="nav-link active "
+                                aria-current="page" href="#">Trending</a>
+                        </li>
+                        <li class="nav-item p-1">
+                            <a onclick="getapi(this.value)" id="upcoming" class="nav-link active " aria-current="page"
+                                href="#">Upcoming</a>
+                        </li>
+                        <li class="nav-item p-1">
+                            <a class="nav-link active " id="nowplaying" aria-current="page" href="#contact">Contact
+                                Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
+    <!-- end nav -->
+    <!-- start api -->
+    <section class="api">
+        <div class="container w-75 m-auto  ">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-groub m-3">
+                        <input onkeyup="ApiSearch(this.value)" type="text"
+                            class="form-control bg-transparent  text-center" placeholder="get movie by word">
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-groub m-3">
+                        <input type="text" id="current" onkeyup="search()"
+                            class="form-control bg-transparent text-center" placeholder="search">
+                    </div>
+                </div>
+            </div>
+            <div class="row  my-3" id="movie">
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- end api -->
+
+    <!-- start login -->
+    <section id="contact" class="login my-5">
+        <div class="container my-auto w-75 ">
+            <h4 class="text-white">ContacUs...</h4>
+            <div class="row p-4 ">
+                <div class="col-md-6">
+                    <div class="form-groub m-3">
+                        <input onkeyup="validation()" type="text" id="username"
+                            class="form-control bg-transparent  text-center" placeholder="enter your name">
+
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-groub m-3">
+                        <input onkeyup="validation()" type="email" id="useremail"
+                            class="form-control  bg-transparent  text-center" placeholder="enter your email">
+
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-groub m-3">
+                        <input onkeyup="validation()" type="password" id="userpassword"
+                            class="form-control  bg-transparent text-center" placeholder="enter your password">
+
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-groub m-3">
+                        <input onkeyup="validation()" type="password" id="userpassword1"
+                            class="form-control   bg-transparent text-center" placeholder="enter your repassword">
+
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-groub m-3">
+                        <input onkeyup="validation()" type="text" id="userphone"
+                            class="form-control  bg-transparent  text-center" placeholder="enter your phone">
+
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-groub m-3">
+                        <input onkeyup="validation()" type="text" id="userage"
+                            class="form-control  bg-transparent text-center" placeholder="enter your age ">
+
+                    </div>
+                </div>
+                <button disabled class="btn btn-danger  bg-transparent text-danger w-25 m-auto" id="mybtn"
+                    onclick="submit()">submit</button>
+            </div>
+        </div>
+    </section>
+    <!-- end login -->
+    <!-- start footer -->
+    <section class="footer">
+        <div class="container">
+            <div class="row bg-dark ">
+                <div class="col-md-12  d-flex ">
+                    <div class="anmi m-3 px-2 w-50  d-flex">
+                        <a href="#">
+                            <i class="fab fa-facebook px-4 "></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-twitter px-4 "> </i>
+                        </a>
+                        <a href="#">
+                            <i class="fas fa-globe px-4 "></i>
+                        </a>
+                    </div>
+                    <div class="text-center my-3 p-2  text-white  w-50">
+                        <p>Copyright Â© 2019 All Rights Reserved</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end footer -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

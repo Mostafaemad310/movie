@@ -1,0 +1,68 @@
+body {
+    background-color: #343a40;
+}
+/* start nav */
+.nav .nav-item a{
+    color: white;
+    transition: 1s;
+}
+.nav a:hover{
+    color: crimson;
+
+}
+.navg{
+    width: 100%;
+    position: fixed;
+     top: 0;
+     z-index: 858787888888;
+}
+.collapse{
+    display: flex;
+    justify-content: center;
+}
+
+/* end nav */
+
+/* start api */
+.api{
+margin-top: 60px;
+}
+.api .post {
+    position: relative;
+    overflow: hidden;
+}
+.post img{
+    border-radius: 5px;
+}
+.post .cap{
+    width: 100%;
+    height: 100%;
+   background-color: rgba(255, 255, 255, .7);  
+   position: absolute;
+   top: 100%;
+   border-radius: 5px;
+  text-align: center; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+transition: top 1s ;
+}
+
+.post:hover .cap{
+    top: 0;
+    }
+
+/* end  api */
+
+
+/* start footer */
+.anmi a{
+    color: white;
+    transition: 1s;
+
+}
+.anmi a:hover{
+    color: crimson;
+
+}
+/* end footer */
